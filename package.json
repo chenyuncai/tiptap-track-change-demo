@@ -12,8 +12,9 @@
     "@tiptap/core": "^2.0.3",
     "@tiptap/starter-kit": "^2.0.3",
     "@tiptap/vue-3": "^2.0.3",
-    "track-change-extension": "^1.0.0",
-    "vue": "^3.2.47"
+    "track-change-extension": "1.0.2",
+    "vue": "^3.2.47",
+    "y-webrtc": "^10.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
