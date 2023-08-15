@@ -4,6 +4,7 @@ import Collaboration from '@tiptap/extension-collaboration'
 import TrackChangeExtension from 'track-change-extension'
 import StarterKit from '@tiptap/starter-kit';
 import * as Y from 'yjs'
+// @ts-ignore
 import { WebrtcProvider } from 'y-webrtc'
 
 import {ref} from 'vue'
