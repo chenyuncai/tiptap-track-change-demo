@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { Editor, EditorContent } from '@tiptap/vue-3'
-import Collaboration from '@tiptap/extension-collaboration'
 import TrackChangeExtension from 'track-change-extension'
 import StarterKit from '@tiptap/starter-kit';
-import * as Y from 'yjs'
-// @ts-ignore
-import { WebrtcProvider } from 'y-webrtc'
 
 import {ref} from 'vue'
 
@@ -16,11 +12,6 @@ const defaultContent = `
 Create exactly the rich text editor you want out of <delete>customizable</delete> building blocks. Tiptap comes with <insert>sensible</insert> defaults, a lot of extensions and a friendly API to customize every aspect. It’s backed by a welcoming community, open source, and free.
 `
 const trackChangeEnabled = ref(true)
-
-// A new Y document
-const ydoc = new Y.Doc()
-// Registered with a WebRTC provider
-new WebrtcProvider('track-change-demo-document', ydoc)
 
 const editor = new Editor({
   content: defaultContent,
@@ -33,9 +24,6 @@ const editor = new Editor({
       },
       dataOpUserId: Math.random().toString(36).substr(2, 5),
       dataOpUserNickname: 'Nickname1'
-    }),
-    Collaboration.configure({
-      document: ydoc,
     }),
   ]
 })
